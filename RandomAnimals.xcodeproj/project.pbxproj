@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58186E092D21ADAFB918EFA9 /* Pods_RandomAnimals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F155D892BBC40763F2A96CC /* Pods_RandomAnimals.framework */; };
 		63DC97C623667C77009A100C /* DogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC97C523667C77009A100C /* DogService.swift */; };
 		63DC97C92366802D009A100C /* DogServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC97C82366802D009A100C /* DogServiceMock.swift */; };
 		63DC97CB23668583009A100C /* DogInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC97CA23668583009A100C /* DogInteractor.swift */; };
@@ -33,7 +32,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F3437F374224C61259E5380 /* Pods-RandomAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomAnimals.release.xcconfig"; path = "Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals.release.xcconfig"; sourceTree = "<group>"; };
 		63DC97C523667C77009A100C /* DogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogService.swift; sourceTree = "<group>"; };
 		63DC97C82366802D009A100C /* DogServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogServiceMock.swift; sourceTree = "<group>"; };
 		63DC97CA23668583009A100C /* DogInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInteractor.swift; sourceTree = "<group>"; };
@@ -50,8 +48,6 @@
 		63F843B42366579F004F8255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63F843C523666230004F8255 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		63F843C823666C58004F8255 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
-		7F155D892BBC40763F2A96CC /* Pods_RandomAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CACB54D453435762F7B13F92 /* Pods-RandomAnimals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomAnimals.debug.xcconfig"; path = "Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58186E092D21ADAFB918EFA9 /* Pods_RandomAnimals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,14 +68,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C20CB1418D6D26BF6D3DDE2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7F155D892BBC40763F2A96CC /* Pods_RandomAnimals.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		63DC97C723668020009A100C /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +91,6 @@
 				63F843B12366579F004F8255 /* RandomAnimalsTests */,
 				63F8439B2366579D004F8255 /* Products */,
 				9FA36A1B286AD83D699890A0 /* Pods */,
-				5C20CB1418D6D26BF6D3DDE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,8 +206,6 @@
 		9FA36A1B286AD83D699890A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CACB54D453435762F7B13F92 /* Pods-RandomAnimals.debug.xcconfig */,
-				2F3437F374224C61259E5380 /* Pods-RandomAnimals.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -233,11 +217,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63F843B72366579F004F8255 /* Build configuration list for PBXNativeTarget "RandomAnimals" */;
 			buildPhases = (
-				D10EA9FBF431EDD53C6B53BE /* [CP] Check Pods Manifest.lock */,
 				63F843962366579D004F8255 /* Sources */,
 				63F843972366579D004F8255 /* Frameworks */,
 				63F843982366579D004F8255 /* Resources */,
-				6FE23D0EBB335DDFCBED49ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,48 +305,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6FE23D0EBB335DDFCBED49ED /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D10EA9FBF431EDD53C6B53BE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RandomAnimals-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63F843962366579D004F8255 /* Sources */ = {
@@ -538,7 +478,6 @@
 		};
 		63F843B82366579F004F8255 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CACB54D453435762F7B13F92 /* Pods-RandomAnimals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -557,7 +496,6 @@
 		};
 		63F843B92366579F004F8255 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F3437F374224C61259E5380 /* Pods-RandomAnimals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
