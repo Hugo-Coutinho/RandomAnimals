@@ -22,7 +22,7 @@ final class DogServiceMock: DogServiceInput {
     func getDog(successCompletion: @escaping ([String: Any]) -> Void, errorCompletion: @escaping () -> Void) {
         switch self.status {
         case .success:
-            successCompletion(["message": "July"])
+            successCompletion(["message": HomeTestsConstant.dogName])
             
         case .error:
             errorCompletion()

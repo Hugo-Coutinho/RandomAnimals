@@ -11,18 +11,30 @@ import XCTest
 
 class HomeTests: XCTestCase {
     
+    //MARK: - DECLARATIONS -
     var responseState: Bool = false
+    var dogImage: UIImage? = nil
+}
 
+//MARK: - OVERRIDE -
+extension HomeTests {
     override func setUp() {
         super.setUp()
         self.responseState = false
+        self.dogImage = nil
     }
-
+    
     override func tearDown() {
         super.tearDown()
         self.responseState = false
+        self.dogImage = nil
     }
-    
+}
+
+
+//MARK: - SERVICE TESTS -
+extension HomeTests {
+        
     func testAttributes() {
         // 1. GIVEN
         let attributes: [String : Any] = ["message": HomeTestsConstant.dogName]
@@ -36,8 +48,7 @@ class HomeTests: XCTestCase {
     
     func testServiceSucess() {
         // 1. GIVEN
-        let slMock = DogServiceMock()
-        let interactor = DogInteractor(service: slMock)
+        let interactor = DogInteractorMock()
         interactor.delegate = self
         
         // 2. WHEN
@@ -62,12 +73,81 @@ class HomeTests: XCTestCase {
     }
 }
 
+//MARK: - INTERACTOR TESTS -
+extension HomeTests {
+    func testDownloadImageSuccess() {
+        // 1. GIVEN
+        let interactor = DogInteractorMock()
+        interactor.delegate = self
+        
+        // 2. WHEN
+        interactor.downloadDogImageMock()
+        
+        // 3. THEN
+        XCTAssertNotNil(self.dogImage)
+    }
+    
+    func testDownloadImageError() {
+        // 1. GIVEN
+        let interactor = DogInteractorMock()
+        interactor.delegate = self
+        
+        // 2. WHEN
+        interactor.downloadState = .failure
+        interactor.downloadDogImageMock()
+        
+        // 3. THEN
+        XCTAssertNil(self.dogImage)
+    }
+}
+
+//MARK: - INTERACTOR OUTPUT -
 extension HomeTests: DogInteractorOutput {
-    func success(dogImageUrl: String) {
+    func downloadDog(dogImage: UIImage?) {
+        self.dogImage = dogImage
         self.responseState = true
     }
 
-    func didFail() {
+    func responseSuccess(dogImageUrl: String) {
+        self.responseState = true
+    }
+
+    func responseDidFail() {
      self.responseState = false
     }
 }
+
+//MARK: - PRESENTER TESTS -
+extension HomeTests {
+    func testPresenterFecthDogSuccess() {
+        // 1. GIVEN
+        let interactor = DogInteractorMock()
+        var presenter = HomePresenter.make(interactor: interactor)
+        presenter.viewDelegate = self
+        interactor.delegate = self
+        
+        // 2. WHEN
+        presenter.fetchDog()
+        
+        // 3. THEN
+        XCTAssertNotNil(self.dogImage)
+    }
+}
+
+//MARK: - PRESENTER OUTPUT -
+extension HomeTests: HomePresenterOutput {
+    func successVisibility(dogImage: UIImage) {
+        self.dogImage = dogImage
+    }
+    
+    func loadingvisibility() {
+        
+    }
+    
+    func failureVisibility() {
+        self.dogImage = nil
+    }
+}
+
+
+

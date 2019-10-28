@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'RandomAnimals' do
   pod 'Alamofire', '4.8'
+  pod 'Kingfisher', '4.10'
 
 end
 

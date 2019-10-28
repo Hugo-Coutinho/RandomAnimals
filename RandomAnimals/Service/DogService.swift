@@ -24,7 +24,7 @@ class DogService: DogServiceInput {
     var delegate: DogServiceOutput?
     
     func getDog(successCompletion: @escaping ([String: Any]) -> Void, errorCompletion: @escaping () -> Void) {
-        let path = "https://dog.ceo/api/breeds/image/random"
+        let path = HomeTestsConstant.apiDog
         
         Alamofire.request(path, method: .get,
                           parameters: nil,
@@ -32,8 +32,9 @@ class DogService: DogServiceInput {
                           headers: nil)
             .validate(statusCode:  200..<300).responseJSON {(response) -> Void in
                 do {
-                    guard let message = response.result.value else { errorCompletion(); return }
-                    successCompletion(["message": message])
+                    let message = response.result.value as AnyObject
+                    guard let dogURL = message["message"] else { errorCompletion(); return }
+                    successCompletion(["url": (dogURL as? String)])
                 } catch {
                     errorCompletion()
                 }
