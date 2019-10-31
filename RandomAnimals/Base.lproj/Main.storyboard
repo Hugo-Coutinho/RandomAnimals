@@ -41,10 +41,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS2-Ni-9ws" userLabel="View Failure">
                                         <rect key="frame" x="33.5" y="20" width="270" height="360"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, Random dog not found " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbL-BR-mql">
-                                                <rect key="frame" x="13.5" y="171.5" width="243" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, Random dog not found " textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wbL-BR-mql">
+                                                <rect key="frame" x="13.5" y="170" width="243" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="wbL-BR-mql" secondAttribute="height" multiplier="270:19" id="2Qx-CN-aPE"/>
+                                                    <constraint firstAttribute="height" constant="20" id="cDz-If-eWw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
                                                 <color key="textColor" red="0.01176470588" green="0.2901960784" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -51,15 +51,7 @@ final class HomePresenter: HomePresenterInput {
     }
 }
 
-extension HomePresenter: DogInteractorOutput {
-    func responseSuccess(dogImageUrl: String) {
-        
-    }
-    
-    func responseDidFail() {
-        self.viewDelegate?.failureVisibility()
-    }
-    
+extension HomePresenter: DogInteractorOutput {    
     func downloadDog(dogImage: UIImage?) {
         guard let dogImage = dogImage else { self.viewDelegate?.failureVisibility(); return }
         self.viewDelegate?.successVisibility(dogImage: dogImage)

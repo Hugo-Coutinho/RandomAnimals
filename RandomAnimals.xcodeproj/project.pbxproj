@@ -20,8 +20,11 @@
 		63F843A52366579F004F8255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F843A42366579F004F8255 /* Assets.xcassets */; };
 		63F843A82366579F004F8255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F843A62366579F004F8255 /* LaunchScreen.storyboard */; };
 		63F843B32366579F004F8255 /* RandomAnimalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F843B22366579F004F8255 /* RandomAnimalsTests.swift */; };
-		63F843C623666230004F8255 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F843C523666230004F8255 /* HomeTests.swift */; };
 		63F843C923666C58004F8255 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F843C823666C58004F8255 /* Dog.swift */; };
+		63FC0EC4236B252E0006D62C /* DogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC0EC3236B252E0006D62C /* DogServiceTests.swift */; };
+		63FC0EC6236B293A0006D62C /* DogInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC0EC5236B293A0006D62C /* DogInteractorTests.swift */; };
+		63FC0EC8236B2AAA0006D62C /* DogPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC0EC7236B2AAA0006D62C /* DogPresenterTests.swift */; };
+		C213BC858E68F1303388D2DB /* Pods_RandomAnimals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAE8032175106F018413F95 /* Pods_RandomAnimals.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1989E14E97DA9D8736246773 /* Pods-RandomAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomAnimals.release.xcconfig"; path = "Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals.release.xcconfig"; sourceTree = "<group>"; };
 		631F49482367700B00D1A1F3 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		63DC97C523667C77009A100C /* DogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogService.swift; sourceTree = "<group>"; };
 		63DC97C82366802D009A100C /* DogServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogServiceMock.swift; sourceTree = "<group>"; };
@@ -51,8 +55,12 @@
 		63F843AE2366579F004F8255 /* RandomAnimalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomAnimalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F843B22366579F004F8255 /* RandomAnimalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAnimalsTests.swift; sourceTree = "<group>"; };
 		63F843B42366579F004F8255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63F843C523666230004F8255 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		63F843C823666C58004F8255 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		63FC0EC3236B252E0006D62C /* DogServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogServiceTests.swift; sourceTree = "<group>"; };
+		63FC0EC5236B293A0006D62C /* DogInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInteractorTests.swift; sourceTree = "<group>"; };
+		63FC0EC7236B2AAA0006D62C /* DogPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPresenterTests.swift; sourceTree = "<group>"; };
+		8386327512147C2F9B0DC8CD /* Pods-RandomAnimals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomAnimals.debug.xcconfig"; path = "Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals.debug.xcconfig"; sourceTree = "<group>"; };
+		FDAE8032175106F018413F95 /* Pods_RandomAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C213BC858E68F1303388D2DB /* Pods_RandomAnimals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +106,7 @@
 				63F843B12366579F004F8255 /* RandomAnimalsTests */,
 				63F8439B2366579D004F8255 /* Products */,
 				9FA36A1B286AD83D699890A0 /* Pods */,
+				E26BBCAA9D0CF9F35BF740F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,11 +137,11 @@
 		63F843B12366579F004F8255 /* RandomAnimalsTests */ = {
 			isa = PBXGroup;
 			children = (
+				63FC0EC2236B25060006D62C /* Tests */,
 				63DC97CC23668920009A100C /* Constant */,
 				63DC97C723668020009A100C /* Mock */,
 				63F843B22366579F004F8255 /* RandomAnimalsTests.swift */,
 				63F843B42366579F004F8255 /* Info.plist */,
-				63F843C523666230004F8255 /* HomeTests.swift */,
 			);
 			path = RandomAnimalsTests;
 			sourceTree = "<group>";
@@ -210,11 +220,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		63FC0EC2236B25060006D62C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				63FC0EC3236B252E0006D62C /* DogServiceTests.swift */,
+				63FC0EC5236B293A0006D62C /* DogInteractorTests.swift */,
+				63FC0EC7236B2AAA0006D62C /* DogPresenterTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		9FA36A1B286AD83D699890A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				8386327512147C2F9B0DC8CD /* Pods-RandomAnimals.debug.xcconfig */,
+				1989E14E97DA9D8736246773 /* Pods-RandomAnimals.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E26BBCAA9D0CF9F35BF740F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDAE8032175106F018413F95 /* Pods_RandomAnimals.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63F843B72366579F004F8255 /* Build configuration list for PBXNativeTarget "RandomAnimals" */;
 			buildPhases = (
+				7E2B1A48F8970880D8C2365A /* [CP] Check Pods Manifest.lock */,
 				63F843962366579D004F8255 /* Sources */,
 				63F843972366579D004F8255 /* Frameworks */,
 				63F843982366579D004F8255 /* Resources */,
+				1FE466D35F42A11FD8DC66A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +345,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FE466D35F42A11FD8DC66A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E2B1A48F8970880D8C2365A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RandomAnimals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63F843962366579D004F8255 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -333,10 +407,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63FC0EC8236B2AAA0006D62C /* DogPresenterTests.swift in Sources */,
 				63DC97CE23668933009A100C /* HomeTestsConstant.swift in Sources */,
-				63F843C623666230004F8255 /* HomeTests.swift in Sources */,
+				63FC0EC4236B252E0006D62C /* DogServiceTests.swift in Sources */,
 				63DC97C92366802D009A100C /* DogServiceMock.swift in Sources */,
 				63F843B32366579F004F8255 /* RandomAnimalsTests.swift in Sources */,
+				63FC0EC6236B293A0006D62C /* DogInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +564,7 @@
 		};
 		63F843B82366579F004F8255 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8386327512147C2F9B0DC8CD /* Pods-RandomAnimals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -506,6 +583,7 @@
 		};
 		63F843B92366579F004F8255 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1989E14E97DA9D8736246773 /* Pods-RandomAnimals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

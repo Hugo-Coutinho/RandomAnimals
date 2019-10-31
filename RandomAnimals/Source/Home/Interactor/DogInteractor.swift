@@ -17,8 +17,6 @@ protocol DogInteractorInput {
 }
 
 protocol DogInteractorOutput {
-    func responseSuccess(dogImageUrl: String)
-    func responseDidFail()
     func downloadDog(dogImage: UIImage?)
 }
 
@@ -40,13 +38,9 @@ class DogInteractor: DogInteractorInput {
     
     func getDog() {
         self.service?.getDog(successCompletion: { (result) in
-            if let message = result["url"] as? String {
-                self.downloadDogImage(url: message)
-            } else {
-                self.delegate?.responseDidFail()
-            }
+                self.downloadDogImage(url: result["url"] as? String ?? "")
         }, errorCompletion: { () in
-            self.delegate?.responseDidFail()
+            self.delegate?.downloadDog(dogImage: nil)
         })
     }
     
@@ -67,6 +61,6 @@ class DogInteractor: DogInteractorInput {
 //MARK: - SERVICE OUTPUT -
 extension DogInteractor: DogServiceOutput {
     func didFail() {
-        self.delegate?.responseDidFail()
+        self.delegate?.downloadDog(dogImage: nil)
     }
 }
