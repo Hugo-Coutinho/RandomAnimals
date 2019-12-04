@@ -11,10 +11,11 @@ import Alamofire
 
 class CatService: FetchAnimalInput {
     func getAnimalByPath(path: String, successCompletion: @escaping (_ animalPath: String) -> Void, errorCompletion: @escaping () -> Void) {
-        BaseRequest(router: path) { (result: Result<Cat>) in
+        BaseRequest(router: path) { (result: Result<Array<Cat>>) in
             if result.isSuccess {
                 guard let cat = result.value else { errorCompletion(); return }
-                successCompletion(cat.url)
+                guard let url = cat.first?.url else { return errorCompletion() }
+                successCompletion(url)
             } else {
                 errorCompletion()
             }

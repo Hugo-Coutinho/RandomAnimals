@@ -41,7 +41,7 @@ class HomeInteractor: HomeInteractorInput {
     
     func getAnimalBy(type: AnimalType) {
         self.animalType = .cat
-        self.service?.getAnimalByPath(path: HomeTestsConstant.apiCat, successCompletion: { (animalPath) in
+        self.service?.getAnimalByPath(path: self.getUrlBy(animalType: type), successCompletion: { (animalPath) in
                 self.downloadDogImage(url: animalPath)
         }, errorCompletion: { () in
             self.delegate?.downloadAnimal(image: nil, animalType: self.animalType)

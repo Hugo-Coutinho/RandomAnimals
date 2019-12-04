@@ -12,8 +12,4 @@ struct Cat: BaseAnimalProtocol {
     var url: String
 }
 
-extension Cat: Codable {
-    private enum CodingKeys : String, CodingKey {
-        case url = "file"
-    }
-}
+extension Cat: Codable { }

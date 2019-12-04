@@ -26,8 +26,8 @@ struct BaseRequest {
                 let responseValueAsData = try? JSONSerialization.data(withJSONObject: responseValue, options: [])
             else { completion(Result.failure(RequestError.Failure())); return }
             do {
-                let model = try JSONDecoder().decode(T.self, from: responseValueAsData)
-                completion(Result.success(model))
+                let element = try JSONDecoder().decode(T.self, from: responseValueAsData)
+                completion(Result.success(element))
             } catch {
                 completion(Result.failure(RequestError.Failure()))
             }

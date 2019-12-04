@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630927B0239800010086AE14 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630927AF239800010086AE14 /* View.swift */; };
 		631F49492367700B00D1A1F3 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631F49482367700B00D1A1F3 /* HomePresenter.swift */; };
 		637AB3812384296000AF9027 /* BaseAnimalProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637AB3802384295F00AF9027 /* BaseAnimalProtocol.swift */; };
 		6384FB992395C463003E5726 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6384FB982395C463003E5726 /* Reachability.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		1989E14E97DA9D8736246773 /* Pods-RandomAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomAnimals.release.xcconfig"; path = "Target Support Files/Pods-RandomAnimals/Pods-RandomAnimals.release.xcconfig"; sourceTree = "<group>"; };
+		630927AF239800010086AE14 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		631F49482367700B00D1A1F3 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		637AB3802384295F00AF9027 /* BaseAnimalProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimalProtocol.swift; sourceTree = "<group>"; };
 		6384FB982395C463003E5726 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -92,9 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630927AE2397FFB80086AE14 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				630927AF239800010086AE14 /* View.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		6384FB962395C41F003E5726 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				630927AE2397FFB80086AE14 /* Extension */,
 				6384FB972395C426003E5726 /* Helper */,
 			);
 			path = Core;
@@ -435,6 +446,7 @@
 				63F843C923666C58004F8255 /* Dog.swift in Sources */,
 				631F49492367700B00D1A1F3 /* HomePresenter.swift in Sources */,
 				63D117E123804A2600D46EAC /* BaseRequest.swift in Sources */,
+				630927B0239800010086AE14 /* View.swift in Sources */,
 				6384FB992395C463003E5726 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

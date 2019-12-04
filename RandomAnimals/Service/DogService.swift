@@ -11,7 +11,7 @@ import Alamofire
 
 class DogService: FetchAnimalInput {
      func getAnimalByPath(path: String, successCompletion: @escaping (_ animalPath: String) -> Void, errorCompletion: @escaping () -> Void) {
-        BaseRequest(router: path) { (result: Result<Cat>) in
+        BaseRequest(router: path) { (result: Result<Dog>) in
             if result.isSuccess {
                 guard let dog = result.value else { errorCompletion(); return }
                 successCompletion(dog.url)
