@@ -16,27 +16,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewError: UIView!
     @IBOutlet weak var viewLoading: UIView!
     @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var animalSegmentControl: UISegmentedControl!
     
     private var presenter: HomePresenterInput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter = HomePresenter.make(viewDelegate: self, interactor: DogInteractor.make(service: DogService()))
+        self.presenter = HomePresenter.make(viewDelegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.loadingvisibility()
-        self.presenter.fetchDog()
+        self.presenter.fetchCurrentAnimalby(index: 0)
+        self.animalSegmentControl.selectedSegmentIndex = 0
     }
     
     
-    @IBAction func runRandomDog(_ sender: Any) {
+    @IBAction func shuffle(_ sender: Any) {
         self.loadingvisibility()
-        self.presenter.fetchDog()
+        self.presenter.fetchCurrentAnimalby(index: self.animalSegmentControl.selectedSegmentIndex)
     }
-    
 }
-
 
 extension ViewController: HomePresenterOutput {
     func successVisibility(dogImage: UIImage) {

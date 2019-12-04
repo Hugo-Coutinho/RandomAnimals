@@ -1,19 +1,19 @@
 //
-//  Dog.swift
+//  Cat.swift
 //  RandomAnimals
 //
-//  Created by BRQ on 27/10/19.
+//  Created by BRQ on 19/11/19.
 //  Copyright © 2019 BRQ. All rights reserved.
 //
 
 import Foundation
 
-struct Dog: BaseAnimalProtocol {
+struct Cat: BaseAnimalProtocol {
     var url: String
 }
 
-extension Dog: Codable {
+extension Cat: Codable {
     private enum CodingKeys : String, CodingKey {
-        case url = "message"
+        case url = "file"
     }
 }

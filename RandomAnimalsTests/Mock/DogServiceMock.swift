@@ -9,20 +9,18 @@
 import Foundation
 @testable import RandomAnimals
 
-final class DogServiceMock: DogServiceInput {
-
+final class DogServiceMock: FetchAnimalInput {
     enum DogServiceStatus {
         case success
         case error
     }
     
-    var delegate: DogServiceOutput?
     var status: DogServiceStatus = .success
     
-    func getDog(successCompletion: @escaping ([String: Any]) -> Void, errorCompletion: @escaping () -> Void) {
+    func getAnimalByPath(path: String, successCompletion: @escaping (String) -> Void, errorCompletion: @escaping () -> Void) {
         switch self.status {
         case .success:
-            successCompletion(["message": HomeTestsConstant.dogName])
+            successCompletion(HomeTestsConstant.dogName)
             
         case .error:
             errorCompletion()
