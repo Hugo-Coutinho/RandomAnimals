@@ -9,30 +9,33 @@
 import Foundation
 import UIKit
 
-class DogInteractorMock: DogInteractorInput {
+class DogInteractorMock: HomeInteractorInput {
+    var service: FetchAnimalInput?
+    
     
     enum DonwloadState {
-        case sucess
+        case success
         case failure
     }
     
-    var delegate: DogInteractorOutput?
-    var downloadState: DonwloadState = .sucess
+    var animalType: AnimalType?
+    var delegate: HomeInteractorOutput?
+    var downloadState: DonwloadState = .success
     
-    static func make(service: DogServiceInput) -> DogInteractorInput {
-        return DogInteractor.init(service: service)
+    static func make(service: FetchAnimalInput) -> HomeInteractorInput {
+        return HomeInteractor.init(service: service)
     }
     
-    func downloadDogImageMock() {
+    func downloadDogImageMock(animalType: AnimalType?) {
         switch downloadState {
-        case .sucess:
-            self.delegate?.downloadDog(dogImage: UIImage())
+        case .success:
+            self.delegate?.downloadAnimal(image: UIImage(), animalType: animalType)
         case .failure:
-            self.delegate?.downloadDog(dogImage: nil)
+            self.delegate?.downloadAnimal(image: nil, animalType: nil)
         }
     }
     
-    func getDog() {
-        self.downloadDogImageMock()
+    func getAnimalBy(type: AnimalType) {
+        self.downloadDogImageMock(animalType: type)
     }
 }

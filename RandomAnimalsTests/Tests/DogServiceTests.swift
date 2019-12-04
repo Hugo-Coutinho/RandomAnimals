@@ -12,68 +12,49 @@ import XCTest
 class DogServiceTests: XCTestCase {
     
     //MARK: - DECLARATIONS -
-    var responseState: Bool = false
-    var dogImage: UIImage? = nil
+    var service: DogServiceMock!
     
     override func setUp() {
         super.setUp()
-        self.responseState = false
-        self.dogImage = nil
+        self.service = DogServiceMock()
     }
     
     override func tearDown() {
         super.tearDown()
-        self.responseState = false
-        self.dogImage = nil
+        service = nil
     }
     
-    func testAttributes() {
-        // 1. GIVEN
-        let attributes: [String : Any] = ["message": HomeTestsConstant.dogName]
-        
+    func testDogServiceSucess() {
         // 2. WHEN
-        let dog = Dog(attributes: attributes)
+        self.service.status = .success
         
         // 3. THEN
-        XCTAssertEqual(dog.message, HomeTestsConstant.dogName)
+        assert(self.networkConnectionIsOk())
+        self.service.getAnimalByPath(path: "", successCompletion: { (url) in
+            assert(url == HomeTestsConstant.dogName)
+        }) {
+            assertionFailure()
+        }
     }
     
-    func testServiceSucess() {
-        // 1. GIVEN
-        let interactor = DogInteractorMock()
-        interactor.delegate = self
-        
+    func testCatServiceFailure() {
         // 2. WHEN
-        interactor.getDog()
+        self.service.status = .error
         
-        // 3. THEN
-        XCTAssertNotNil(self.dogImage)
-    }
-    
-    func testServiceFailure() {
-        // 1. GIVEN
-        let slMock = DogServiceMock()
-        let interactor = DogInteractor(service: slMock)
-        interactor.delegate = self
-        
-        // 2. WHEN
-        slMock.status = .error
-        interactor.getDog()
-        
-        // 3. THEN
-        XCTAssertFalse(self.responseState)
+        service.getAnimalByPath(path: "", successCompletion: { (successAny) in
+            // 3. THEN
+            assertionFailure()
+        }) {
+            
+            XCTAssertTrue(true)
+        }
     }
 }
 
-//MARK: - INTERACTOR OUTPUT -
-extension DogServiceTests: DogInteractorOutput {
-    func downloadDog(dogImage: UIImage?) {
-        guard let dogImage = dogImage else { self.responseState = false; return }
-        self.dogImage = dogImage
-        self.responseState = true
-    }
-    
-    func responseDidFail() {
-        self.responseState = false
+//MARK: - AUX METHODS -
+extension DogServiceTests {
+    private func networkConnectionIsOk() -> Bool {
+        guard Reachability.isConnectedToNetwork() else { return false }
+        return true
     }
 }

@@ -8,10 +8,12 @@
 
 import Foundation
 
-class Dog {
-    var message: String?
-    
-    init(attributes: [String: Any]) {
-         self.message = attributes["message"] as? String
+struct Dog: BaseAnimalProtocol {
+    var url: String
+}
+
+extension Dog: Codable {
+    private enum CodingKeys : String, CodingKey {
+        case url = "message"
     }
 }
