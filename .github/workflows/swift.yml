@@ -1,6 +1,10 @@
 name: Swift
 
-on: [push]
+on: 
+ push:
+    branches:
+    - master
+    - /*
 
 jobs:
   build:
@@ -8,8 +12,20 @@ jobs:
     runs-on: macOS-latest
 
     steps:
+    - name: Install Dependencies
+      run: npm install
     - uses: actions/checkout@v1
     - name: Build
       run: swift build -v
     - name: Run tests
       run: swift test -v
+    - name: SwiftLint
+      uses: norio-nomura/action-swiftlint@3.0.1
+    - name: Danger Swift
+      uses: danger/swift@2.0.3
+    - name: CocoaPods Action
+      uses: ty0x2333/cocoapods-action@0.2.0
+      with:
+            workspace: .xcworkspace 
+            additional_lint_params: pod lib lint
+            test: Run test
