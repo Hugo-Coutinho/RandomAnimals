@@ -16,7 +16,7 @@ jobs:
       run: npm install
     - uses: actions/checkout@v1
     - name: Build
-      run: swift build -v
+      run: xcodebuild -scheme "RandomAnimals" -workspace "RandomAnimals.xcworkspace"  -allowProvisioningUpdates build
     - name: Run tests
       run: swift test -v
     - name: SwiftLint
