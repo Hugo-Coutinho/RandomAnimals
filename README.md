@@ -1,4 +1,4 @@
-# RandomDog
+# RandomAnimals
 TDD practice
 
 pod is not installed
