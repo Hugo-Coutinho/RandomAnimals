@@ -17,8 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var viewLoading: UIView!
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var animalSegmentControl: UISegmentedControl!
+    @IBOutlet weak var shuffleAnimalSuccessVisibility: HomeButton!
+    @IBOutlet weak var shuffleAnimalFailureVisibility: HomeButton!
     
     private var presenter: HomePresenterInput!
+    var tap: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +33,6 @@ class ViewController: UIViewController {
         self.presenter.fetchCurrentAnimalby(index: 0)
         self.animalSegmentControl.selectedSegmentIndex = 0
     }
-    
-    
-    @IBAction func shuffle(_ sender: Any) {
-        self.loadingvisibility()
-        self.presenter.fetchCurrentAnimalby(index: self.animalSegmentControl.selectedSegmentIndex)
-    }
 }
 
 extension ViewController: HomePresenterOutput {
@@ -44,6 +41,7 @@ extension ViewController: HomePresenterOutput {
         self.viewSuccess.alpha = 1
         self.viewLoading.alpha = 0
         self.dogImage.image = dogImage
+        self.setTapToEachHomeButton(homeButtonByCurrentVisibility: shuffleAnimalSuccessVisibility)
     }
     
     func loadingvisibility() {
@@ -57,5 +55,19 @@ extension ViewController: HomePresenterOutput {
         self.viewError.alpha = 1
         self.viewSuccess.alpha = 0
         self.viewLoading.alpha = 0
+        self.setTapToEachHomeButton(homeButtonByCurrentVisibility: shuffleAnimalFailureVisibility)
+    }
+}
+
+// MARK: - SETUP TAP
+extension ViewController {
+    private func setTapToEachHomeButton(homeButtonByCurrentVisibility: HomeButton) {
+        self.tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.shuffleAnimal))
+        homeButtonByCurrentVisibility.addGestureRecognizer(self.tap)
+    }
+    
+    @objc private func shuffleAnimal() {
+        self.loadingvisibility()
+        self.presenter.fetchCurrentAnimalby(index: self.animalSegmentControl.selectedSegmentIndex)
     }
 }

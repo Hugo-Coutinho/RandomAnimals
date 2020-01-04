@@ -50,52 +50,26 @@
                                                 <color key="textColor" red="0.01176470588" green="0.2901960784" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgx-ep-Ji4" customClass="HomeButton" customModule="RandomAnimals" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="329" width="270" height="26.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Cgx-ep-Ji4" secondAttribute="height" multiplier="152:15" id="bnZ-qu-CvN"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="wbL-BR-mql" firstAttribute="centerY" secondItem="hS2-Ni-9ws" secondAttribute="centerY" id="O1F-aF-Weu"/>
+                                            <constraint firstItem="Cgx-ep-Ji4" firstAttribute="centerX" secondItem="hS2-Ni-9ws" secondAttribute="centerX" id="Q86-ks-sj4"/>
                                             <constraint firstItem="wbL-BR-mql" firstAttribute="width" secondItem="hS2-Ni-9ws" secondAttribute="width" multiplier="0.9" id="Rso-Yb-5bO"/>
+                                            <constraint firstItem="Cgx-ep-Ji4" firstAttribute="centerY" secondItem="hS2-Ni-9ws" secondAttribute="centerY" multiplier="1.9" id="aI3-FB-R9S"/>
+                                            <constraint firstItem="Cgx-ep-Ji4" firstAttribute="width" secondItem="hS2-Ni-9ws" secondAttribute="width" id="dtL-vh-we7"/>
                                             <constraint firstItem="wbL-BR-mql" firstAttribute="centerX" secondItem="hS2-Ni-9ws" secondAttribute="centerX" id="iGS-MN-ah2"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czT-ka-WY9" userLabel="View Success">
                                         <rect key="frame" x="16.5" y="20" width="304" height="360"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbh-wG-EIp">
-                                                <rect key="frame" x="30.5" y="336" width="243" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Lbh-wG-EIp" secondAttribute="height" multiplier="152:15" id="9Pp-sz-CuR"/>
-                                                </constraints>
-                                                <state key="normal" title="Suffle">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="1" height="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                        <color key="value" red="0.015686274510000001" green="0.1215686275" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="shuffle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qy7-ys-6fI"/>
-                                                </connections>
-                                            </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Ne-tw-r2W">
                                                 <rect key="frame" x="0.0" y="16" width="304" height="199.5"/>
                                                 <constraints>
@@ -112,18 +86,25 @@
                                                     <segment title="CAT"/>
                                                 </segments>
                                             </segmentedControl>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGP-cq-GrR" customClass="HomeButton" customModule="RandomAnimals" customModuleProvider="target">
+                                                <rect key="frame" x="30.5" y="328" width="243" height="24"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZGP-cq-GrR" secondAttribute="height" multiplier="152:15" id="66G-0a-aSm"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="FMd-JK-c9y" firstAttribute="width" secondItem="czT-ka-WY9" secondAttribute="width" multiplier="0.399" id="1XJ-gf-Gec"/>
                                             <constraint firstItem="FMd-JK-c9y" firstAttribute="centerY" secondItem="czT-ka-WY9" secondAttribute="centerY" constant="95.5" id="1ih-5o-4ZD"/>
+                                            <constraint firstItem="ZGP-cq-GrR" firstAttribute="width" secondItem="czT-ka-WY9" secondAttribute="width" multiplier="0.8" id="DBs-Pt-oBy"/>
                                             <constraint firstItem="6Ne-tw-r2W" firstAttribute="width" secondItem="czT-ka-WY9" secondAttribute="width" id="FPl-XS-75L"/>
-                                            <constraint firstAttribute="bottom" secondItem="Lbh-wG-EIp" secondAttribute="bottom" id="GCG-6Y-PKp"/>
                                             <constraint firstItem="6Ne-tw-r2W" firstAttribute="top" secondItem="czT-ka-WY9" secondAttribute="top" constant="16" id="H6G-vH-eMu"/>
+                                            <constraint firstItem="ZGP-cq-GrR" firstAttribute="centerX" secondItem="czT-ka-WY9" secondAttribute="centerX" id="cuU-S0-fcY"/>
                                             <constraint firstItem="FMd-JK-c9y" firstAttribute="centerX" secondItem="czT-ka-WY9" secondAttribute="centerX" id="dlh-gQ-YAE"/>
-                                            <constraint firstItem="Lbh-wG-EIp" firstAttribute="centerX" secondItem="czT-ka-WY9" secondAttribute="centerX" id="ekI-0s-DTA"/>
-                                            <constraint firstItem="Lbh-wG-EIp" firstAttribute="width" secondItem="czT-ka-WY9" secondAttribute="width" multiplier="0.8" id="kU9-7d-CYV"/>
                                             <constraint firstItem="6Ne-tw-r2W" firstAttribute="centerX" secondItem="czT-ka-WY9" secondAttribute="centerX" id="thN-Rw-WTs"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZGP-cq-GrR" secondAttribute="bottom" constant="8" id="vCe-C4-5ig"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -158,6 +139,8 @@
                         <outlet property="dogImage" destination="6Ne-tw-r2W" id="iwP-hA-VC2"/>
                         <outlet property="labelUnavailable" destination="wbL-BR-mql" id="b1p-jh-Zec"/>
                         <outlet property="loading" destination="aZQ-5X-2LY" id="0Ou-br-5Re"/>
+                        <outlet property="shuffleAnimalFailureVisibility" destination="Cgx-ep-Ji4" id="SDU-qX-fQO"/>
+                        <outlet property="shuffleAnimalSuccessVisibility" destination="ZGP-cq-GrR" id="Oko-LZ-PAK"/>
                         <outlet property="viewError" destination="hS2-Ni-9ws" id="ibx-nh-C39"/>
                         <outlet property="viewLoading" destination="oZP-XN-V6b" id="NeF-yl-Nhb"/>
                         <outlet property="viewSuccess" destination="czT-ka-WY9" id="Nfi-MC-208"/>
@@ -165,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="115"/>
+            <point key="canvasLocation" x="168.80000000000001" y="114.69265367316342"/>
         </scene>
     </scenes>
 </document>
