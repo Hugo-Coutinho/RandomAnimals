@@ -2,8 +2,8 @@
 //  DogServiceTests.swift
 //  RandomAnimalsTests
 //
-//  Created by BRQ on 31/10/19.
-//  Copyright © 2019 BRQ. All rights reserved.
+//  Created by Hugo on 31/10/19.
+//  Copyright © 2019 Hugo. All rights reserved.
 //
 
 import XCTest

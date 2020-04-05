@@ -2,8 +2,8 @@
 //  View.swift
 //  RandomAnimals
 //
-//  Created by BRQ on 04/12/19.
-//  Copyright © 2019 BRQ. All rights reserved.
+//  Created by Hugo on 04/12/19.
+//  Copyright © 2019 Hugo. All rights reserved.
 //
 
 import Foundation

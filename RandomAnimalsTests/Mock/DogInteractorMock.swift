@@ -2,8 +2,8 @@
 //  DogInteractorMock.swift
 //  RandomAnimalsTests
 //
-//  Created by BRQ on 28/10/19.
-//  Copyright © 2019 BRQ. All rights reserved.
+//  Created by Hugo on 28/10/19.
+//  Copyright © 2019 Hugo. All rights reserved.
 //
 
 import Foundation
